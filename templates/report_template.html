@@ -1,1 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>VLU 4G Report</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        h1, h2 { color: #003366; }
+        table { border-collapse: collapse; width: 100%; margin-bottom: 20px; }
+        th, td { border: 1px solid #999; padding: 6px; font-size: 12px; }
+        th { background-color: #f2f2f2; }
+    </style>
+</head>
+<body>
+    <h1>VLU 4G Report - {{ date }}</h1>
 
+    <h2>Location-wise Data Usage</h2>
+    {{ data_usage | safe }}
+
+    <h2>Location-wise VOLTE Call Report</h2>
+    {{ volte_data | safe }}
+
+    <h2>Location Detail View</h2>
+    {{ detail_view | safe }}
+
+    <h2>Zero Data Sites</h2>
+    {{ zero_data | safe }}
+</body>
+</html>
